@@ -1,0 +1,43 @@
+package servlet.copy;
+
+import java.io.IOException;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/Ex01_Hello")
+public class Ex01_Hello extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public Ex01_Hello() {	// 요청과 처리할 서블릿을 받아옴
+    	System.out.println(">> 생성자 실행");
+    }
+
+
+    public void init(ServletConfig config) throws ServletException {
+    	System.out.println(">> init()생성자 실행");
+	}
+
+	public void destroy() {
+		System.out.println(">> destroy() 생성자 실행");
+	}
+
+//	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		System.out.println(">> service()생성자 실행");
+//	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println(">> doGet() 생성자 실행");
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println(">> doPost생성자 실행");
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

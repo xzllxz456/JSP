@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+</head>
+<body>
+	<h1>회원가입</h1>
+	<form action="signup">
+		<fieldset>
+			<legend>회원가입</legend>
+				
+		</fieldset>
+	</form>
+</body>
+</html>

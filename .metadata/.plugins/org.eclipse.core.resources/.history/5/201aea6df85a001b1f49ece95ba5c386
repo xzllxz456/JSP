@@ -1,0 +1,26 @@
+package com.servlet;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/test03")
+public class Ex03_test extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("> doGet() 실행~~");
+		// 응답시 한글처리를 위한 문자셋 지정
+		response.setContentType("text/html; charset=utf-8");
+		
+		// 클라이언트가 전달한 데이터를 받아서 HTML문서를 만들어서 되돌려줌
+		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%!
+	//(실습) 주문한 내역에 따라 계산하고 내역에 표시
+	//String coffee = getInitParameter("coffee");
+	//int su = Integer.parseInt(getInitParameter("su"));
+	//String money = getInitParameter("money");
+	
+		
+%>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+
+
+</body>
+</html>

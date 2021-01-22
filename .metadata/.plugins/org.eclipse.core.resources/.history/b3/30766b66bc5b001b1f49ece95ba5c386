@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JSP id, pw</title>
+</head>
+<body>
+	<%-- JSP 요청 페이지에 응답페이지로 이동 --%>
+	<h2>(요청페이지)ID, PW 값 서버측으로 전달</h2>
+	<form action="">
+		<p>ID : <input type="text" name="id"> </p>
+		<p>PW : <input type="password" name="pw"> </p>
+		
+	</form>
+</body>
+</html>

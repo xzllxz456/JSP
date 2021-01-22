@@ -1,0 +1,61 @@
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.Map"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+
+<%! 
+	class coffee {
+	String coffee = "";
+	int coffeePrice = 0;
+	
+	}
+	String coffeeName = "";
+	int tot = 0;
+	int su = 0;
+	int money = 0;
+	
+	Map<String, String> coffeeMap = new HashMap<>();
+	public void coffeeMapSet(){
+		coffeeMap.put("1","");
+		coffeeMap.put("2","");
+		coffeeMap.put("3","");
+		coffeeMap.put("4","");
+	}
+%>
+<%
+	coffee = request.getParameter("coffee");
+	su =  Integer.parseInt(request.getParameter("su"));
+	money = Integer.parseInt(request.getParameter("money"));
+	
+	
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+
+	<h2>주문 계산 결과</h2>
+	
+	<h3>커피종류 :  </h3>
+	<h3>단가 : </h3>
+	<h3>수량 : </h3>
+	<h3>구입금액 :</h3>
+	<h3>-------------------</h3>
+	<h3>입금액 : </h3>
+	<h3>잔액 : </h3>
+	<%-- 
+		커피종류 : 아메리카노
+		단가 : 3000원
+		수량 : 3
+		구입금액 : 9000원 (단가 * 수량)
+		------------------------
+		입금액 : 10000원
+		잔액 : 1000원 (입금액 - 구입금액)
+	 --%>
+</body>
+</html>

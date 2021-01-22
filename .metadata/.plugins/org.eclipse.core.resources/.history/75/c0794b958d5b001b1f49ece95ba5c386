@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>성적처리</title>
+</head>
+<body>
+	<h2>성적처리</h2>
+	<form action="sungjuk">
+		<p>이름 : <input type="text" name="name" value="홀길동"></p>
+	</form>
+</body>
+</html>

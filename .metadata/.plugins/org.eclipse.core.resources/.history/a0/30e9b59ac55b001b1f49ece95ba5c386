@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>커피주문</title>
+</head>
+<body>
+	<h1>커피주문</h1>
+	<form action="ex07_resp.jsp">
+		<input type="radio" name="coffee" value="1" checked>아메리카노(3000)<br>
+		<input type="radio" name="coffee" value="2" checked>아메리카노(3000)<br>
+		<input type="radio" name="coffee" value="3" checked>아메리카노(3000)<br>
+		<input type="radio" name="coffee" value="4" checked>아메리카노(3000)<br>
+	</form>
+		
+</body>
+</html>

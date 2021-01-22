@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	//(실습) 주문한 내역에 따라 계산하고 내역에 표시
+%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<h2>주문 계산 결과</h2>
+	<%--
+		커피종류 : 아메리카노
+		단가 : 3000원
+		수량 : 3
+		구입금액 : 9000원 (단가 * 수량)
+	 --%>
+</body>
+</html>

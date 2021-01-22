@@ -1,0 +1,12 @@
+package com.study.servlet;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/signup")
+public class Ex04 extends HttpServlet {
+	public Ex04() {
+		// TODO Auto-generated constructor stub
+	}
+	
+}

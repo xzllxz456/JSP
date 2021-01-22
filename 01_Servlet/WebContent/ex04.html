@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+</head>
+<body>
+	<h1>회원가입</h1>
+ 	<form action="signup" method="post">
+	<!-- <form action="signup" method="get"> -->
+		<fieldset>
+			<legend>회원가입</legend>
+			<P>이름 : <input type="text" name="name"></P>	
+			<P>아이디 : <input type="text" name="id"></P>	
+			<P>암호 : <input type="password" name="pwd"></P>	
+			<P>암호확인 : <input type="password" name="pwd2"></P>	
+			<P>이메일 : <input type="text" name="email"></P>	
+			<p>취미 : 
+				<input type="checkbox" name="hobby" value="sport">운동
+				<input type="checkbox" name="hobby" value="game">게임
+				<input type="checkbox" name="hobby" value="movie">영화
+				<input type="checkbox" name="hobby" value="book">독서
+			</p>	
+			<input type="submit" value="회원가입">
+			<input type="reset" value="초기화(다시작성)">
+		</fieldset>
+	</form>
+</body>
+</html>
