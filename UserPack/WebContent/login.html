@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+</head>
+<body>
+<form action="">
+	<label for="id">아이디 : </label>
+	<input type="text" name="id" id="id">
+	<br>
+	<label for="password">비밀번호 : </label>
+	<input type="text" name="password" id="password">
+	<br>
+	<button type="button" id="login">로그인</button>
+	<button type="button" id="join">가입</button>
+</form>
+
+<script>
+	document.getElementById("login").addEventListener("click", function () {
+		this.form.action = "loginController";
+		this.form.method = "post";
+		this.form.submit();
+	});
+	
+	document.querySelector("#join").addEventListener("click", function() {
+		this.form.action = "join.html";
+		this.form.method = "get";
+		this.form.submit();
+	})
+</script>
+</body>
+</html>
