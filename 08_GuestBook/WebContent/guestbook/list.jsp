@@ -23,6 +23,7 @@
 <title>전체목록</title>
 	<!-- <link href="../css/guestbook.css" rel="stylesheet" type="text/css"> -->
 	<link href="/08_GuestBook/css/guestbook.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 <div id="container">

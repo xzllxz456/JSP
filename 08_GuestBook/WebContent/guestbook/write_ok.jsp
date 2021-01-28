@@ -1,3 +1,4 @@
+<%@page import="com.bc.mybatis.GuestbookVO"%>
 <%@page import="com.bc.mybatis.DBService"%>
 <%@page import="org.apache.ibatis.session.SqlSession"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -7,10 +8,25 @@
     	입력 성공시 : 목록 페이지로 이동(list.jsp)
     	예외 발생시 : 메시지 표시 후 이전 화면 (입력페이지) 이동
      --%>
+     
+     
 <%
 	//한글처리
 	request.setCharacterEncoding("UTF-8");
 	// 1. 파라미터값 추출해서 VO객체에 저장 (guestbookVO)
+%>
+
+<%
+/*
+	//String name = request.getParameter("name");
+	//String subject = request.getParameter("subject");
+	String email = request.getParameter("email");
+	GuestbookVO vo = new GuestbookVO();
+	vo.setName( request.getParameter("name"));
+	vo.setSubject(request.getParameter("subject"));
+	vo.setEmail(email);
+	session.setAttribute("vo", vo);
+*/	
 %>
      <jsp:useBean id="guestbookVO" class="com.bc.mybatis.GuestbookVO" />
      <jsp:setProperty property="*" name="guestbookVO"/>
