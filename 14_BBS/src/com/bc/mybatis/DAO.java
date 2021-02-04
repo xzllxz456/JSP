@@ -53,6 +53,24 @@ public class DAO {
 		return res;
 	}
 	
+	// 게시글 수정처리
+	public static int update(BBSVO bvo) {
+		SqlSession session = DBService.getFactory().openSession(true);
+		int res = session.update("BBS.update", bvo);
+		session.close();
+		return res;
+	}
+	
+	
+	// 게시글 삭제 처리
+	public static int delete(String b_idx) {
+		SqlSession session = DBService.getFactory().openSession(true);
+		int res = session.delete("BBS.delete", b_idx);
+		session.close();
+		return res;
+		
+	}
+	
 	//======================댓글관련=============================
 	public static List<CommVO> getCommList(String b_idx) {
 		SqlSession session = DBService.getFactory().openSession();
@@ -67,5 +85,12 @@ public class DAO {
 		session.close();
 		return res;
 		
+	}
+	
+	public static int deleteComment(String c_idx) {
+		SqlSession session = DBService.getFactory().openSession(true);
+		int res = session.delete("BBS.c_delete", c_idx);
+		session.close();
+		return res;
 	}
 }
