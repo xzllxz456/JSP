@@ -14,6 +14,39 @@
 		SELECT * FROM EMPLOYEES WHERE DEPARTMENT_ID = #{department_id}
 		ORDER BY EMPLOYEE_ID 
 	</select>
+	
+	<!-- 이름으로 검색 -->
+	<select id="fullNameList" parameterType="string" resultType="com.bc.model.vo.EmployeeVO">
+		SELECT * 
+		FROM EMPLOYEES
+		WHERE FIRST_NAME = INITCAP(#{fullname}) OR LAST_NAME = INITCAP(#{fullname})
+		ORDER BY EMPLOYEE_ID	
+	</select>
+	
+	<!-- 동적 검색 -->
+	<select id="seach" parameterType="map" resultType="com.bc.model.vo.EmployeeVO">
+		SELECT * 
+		FROM EMPLOYEES
+		<choose>
+			<when test="idx == 0">
+				WHERE EMPLOYEE_ID = #{keyword}
+			</when>
+			<when test="idx == 1">
+				WHERE FIRST_NAME = INITCAP(#{keyword})
+				 OR LAST_NAME = INITCAP(#{keyword})
+			</when>
+			<when test="idx == 2">
+				WHERE JOB_ID = UPPER(#{keyword})
+			</when>
+			<when test="idx == 3">
+				WHERE DEPARTMENT_ID = #{keyword}
+			</when>
+			<otherwise>
+				WHERE 1 = 2
+			</otherwise>
+		</choose>
+		ORDER BY EMPLOYEE_ID
+	</select>
 </mapper>
 
 
